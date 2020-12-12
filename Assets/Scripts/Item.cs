@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
+[Serializable]// インスペクターで表示される
 public class Item
 {
     // 種類を持っている
@@ -16,5 +15,10 @@ public class Item
     public Type type;
 
     // TODO:画像を持っている
+
+    public Item(Item item)
+    {
+        this.type = item.type;
+    }
     
 }
