@@ -10,5 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f5fdcc8a74e4165837efb27fd4c24f, type: 3}
-  m_Name: New Item Database Entity
+  m_Name: ItemDatabaseEntity
   m_EditorClassIdentifier: 
+  items:
+  - type: 0
+    sprite: {fileID: 21300000, guid: 3e63fd3f8b3964b45922720e5546d27e, type: 3}
+  - type: 1
+    sprite: {fileID: 21300000, guid: ee1ea681bd32e4c6d8157ce399d924a4, type: 3}
+  - type: 2
+    sprite: {fileID: 21300000, guid: d15d9c437392b40b0b81a4a5c0e76788, type: 3}
+  - type: 3
+    sprite: {fileID: 21300000, guid: 4c91b905b3f864826aa63d855c9dd00c, type: 3}
+  - type: 4
+    sprite: {fileID: 21300000, guid: 10c625185ae084f55bcdee0d7dac4183, type: 3}
