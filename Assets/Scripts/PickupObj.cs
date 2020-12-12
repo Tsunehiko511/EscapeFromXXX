@@ -13,6 +13,8 @@ public class PickupObj : MonoBehaviour
     // クリックしたら消える:Trigger
     public void OnClickObj()
     {
+        Item item = ItemDatabase.instance.Spawn(type);
+        ItemBox.instance.SetItem(item);
         gameObject.SetActive(false);
     }
 }
