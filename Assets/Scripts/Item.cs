@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 [Serializable]// インスペクターで表示される
 public class Item
@@ -13,12 +14,14 @@ public class Item
         Coin,
     }
     public Type type;
+    // 画像を持っている
+    public Sprite sprite;
 
-    // TODO:画像を持っている
 
     public Item(Item item)
     {
         this.type = item.type;
+        this.sprite = item.sprite;
     }
     
 }

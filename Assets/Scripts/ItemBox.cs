@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ItemBox : MonoBehaviour
 {
+    // ItemBoxが全てのSlotを把握
+    [SerializeField] Slot[] slots = default;
+
     // どこかれでも利用できる変数
     public static ItemBox instance;
 
@@ -16,6 +19,15 @@ public class ItemBox : MonoBehaviour
     // クリックしたらItemを受け取る
     public void SetItem(Item item)
     {
-        Debug.Log(item.type);
+        // 左詰で入れる=左から空いてるSlotがあれば入れる
+        for (int i=0; i<slots.Length; i++)
+        {
+            Slot slot = slots[i];
+            if (slot.IsEmpty())
+            {
+                slot.Set(item);
+                break;
+            }
+        }
     }
 }
